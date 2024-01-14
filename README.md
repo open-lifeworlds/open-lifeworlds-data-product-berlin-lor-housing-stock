@@ -9,7 +9,7 @@
   <h1 align="center">Open Lifeworlds Data Product - Berlin LOR housing stock</h1>
 
   <p align="center">
-    Data product providing Berlin LOR housing stock data</a>
+    Consumer-aligned data product combining Berlin LOR housing stock data and geodata</a>
   </p>
 </p>
 
