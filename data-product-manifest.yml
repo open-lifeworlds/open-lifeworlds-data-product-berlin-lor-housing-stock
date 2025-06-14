@@ -801,17 +801,17 @@ observability:
         - name: berlin-lor-housing-stock-2022-00-districts.geojson
           value: 100
         - name: berlin-lor-housing-stock-2022-00-forecast-areas.geojson
-          value: 79
+          value: 88
         - name: berlin-lor-housing-stock-2022-00-district-regions.geojson
-          value: 73
+          value: 81
         - name: berlin-lor-housing-stock-2022-00-planning-areas.geojson
           value: 67
         - name: berlin-lor-housing-stock-2023-00-districts.geojson
           value: 100
         - name: berlin-lor-housing-stock-2023-00-forecast-areas.geojson
-          value: 79
+          value: 88
         - name: berlin-lor-housing-stock-2023-00-district-regions.geojson
-          value: 73
+          value: 81
         - name: berlin-lor-housing-stock-2023-00-planning-areas.geojson
           value: 67
   operational:

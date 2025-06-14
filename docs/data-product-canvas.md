@@ -734,12 +734,12 @@
 | berlin-lor-housing-stock-2021-00-district-regions.geojson | 97 |
 | berlin-lor-housing-stock-2021-00-planning-areas.geojson | 80 |
 | berlin-lor-housing-stock-2022-00-districts.geojson | 100 |
-| berlin-lor-housing-stock-2022-00-forecast-areas.geojson | 79 |
-| berlin-lor-housing-stock-2022-00-district-regions.geojson | 73 |
+| berlin-lor-housing-stock-2022-00-forecast-areas.geojson | 88 |
+| berlin-lor-housing-stock-2022-00-district-regions.geojson | 81 |
 | berlin-lor-housing-stock-2022-00-planning-areas.geojson | 67 |
 | berlin-lor-housing-stock-2023-00-districts.geojson | 100 |
-| berlin-lor-housing-stock-2023-00-forecast-areas.geojson | 79 |
-| berlin-lor-housing-stock-2023-00-district-regions.geojson | 73 |
+| berlin-lor-housing-stock-2023-00-forecast-areas.geojson | 88 |
+| berlin-lor-housing-stock-2023-00-district-regions.geojson | 81 |
 | berlin-lor-housing-stock-2023-00-planning-areas.geojson | 67 |
 
 
