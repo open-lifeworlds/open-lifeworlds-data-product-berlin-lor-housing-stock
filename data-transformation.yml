@@ -1,0 +1,610 @@
+---
+attribute_groups:
+  all: &all
+    - name: inhabitants
+    - name: apartments
+    - name: apartments_with_1_room
+    - name: apartments_with_2_rooms
+    - name: apartments_with_3_rooms
+    - name: apartments_with_4_rooms
+    - name: apartments_with_5_rooms
+    - name: apartments_with_6_rooms
+    - name: apartments_with_7_or_more_apartments
+    - name: apartments_with_7_rooms_or_more
+    - name: apartments_rooms
+    - name: apartments_living_area
+    - name: residential_buildings
+    - name: residential_buildings_living_area
+    - name: residential_buildings_apartments
+    - name: residential_buildings_with_1_apartment
+    - name: residential_buildings_with_1_apartment_living_area
+    - name: residential_buildings_with_2_apartments
+    - name: residential_buildings_with_2_apartments_living_area
+    - name: residential_buildings_with_2_apartments_apartments
+    - name: residential_buildings_with_3_apartments
+    - name: residential_buildings_with_3_apartments_living_area
+    - name: residential_buildings_with_3_apartments_apartments
+    - { name: inhabitants_per_sqkm, numerator: inhabitants, denominator_area_sqkm: True }
+    - { name: apartments_per_sqkm, numerator: apartments, denominator_area_sqkm: True }
+    - { name: apartments_with_1_room_per_sqkm, numerator: apartments_with_1_room, denominator_area_sqkm: True }
+    - { name: apartments_with_2_rooms_per_sqkm, numerator: apartments_with_2_rooms, denominator_area_sqkm: True }
+    - { name: apartments_with_3_rooms_per_sqkm, numerator: apartments_with_3_rooms, denominator_area_sqkm: True }
+    - { name: apartments_with_4_rooms_per_sqkm, numerator: apartments_with_4_rooms, denominator_area_sqkm: True }
+    - { name: apartments_with_5_rooms_per_sqkm, numerator: apartments_with_5_rooms, denominator_area_sqkm: True }
+    - { name: apartments_with_6_rooms_per_sqkm, numerator: apartments_with_6_rooms, denominator_area_sqkm: True }
+    - { name: apartments_with_7_or_more_apartments_per_sqkm, numerator: apartments_with_7_or_more_apartments, denominator_area_sqkm: True }
+    - { name: apartments_with_7_rooms_or_more_per_sqkm, numerator: apartments_with_7_rooms_or_more, denominator_area_sqkm: True }
+    - { name: apartments_rooms_per_sqkm, numerator: apartments_rooms, denominator_area_sqkm: True }
+    - { name: apartments_living_area_per_sqkm, numerator: apartments_living_area, denominator_area_sqkm: True }
+    - { name: residential_buildings_per_sqkm, numerator: residential_buildings, denominator_area_sqkm: True }
+    - { name: residential_buildings_living_area_per_sqkm, numerator: residential_buildings_living_area, denominator_area_sqkm: True }
+    - { name: residential_buildings_apartments_per_sqkm, numerator: residential_buildings_apartments, denominator_area_sqkm: True }
+    - { name: residential_buildings_with_1_apartment_per_sqkm, numerator: residential_buildings_with_1_apartment, denominator_area_sqkm: True }
+    - { name: residential_buildings_with_1_apartment_living_area_per_sqkm, numerator: residential_buildings_with_1_apartment_living_area, denominator_area_sqkm: True }
+    - { name: residential_buildings_with_2_apartments_per_sqkm, numerator: residential_buildings_with_2_apartments, denominator_area_sqkm: True }
+    - { name: residential_buildings_with_2_apartments_living_area_per_sqkm, numerator: residential_buildings_with_2_apartments_living_area, denominator_area_sqkm: True }
+    - { name: residential_buildings_with_2_apartments_apartments_per_sqkm, numerator: residential_buildings_with_2_apartments_apartments, denominator_area_sqkm: True }
+    - { name: residential_buildings_with_3_apartments_per_sqkm, numerator: residential_buildings_with_3_apartments, denominator_area_sqkm: True }
+    - { name: residential_buildings_with_3_apartments_living_area_per_sqkm, numerator: residential_buildings_with_3_apartments_living_area, denominator_area_sqkm: True }
+    - { name: residential_buildings_with_3_apartments_apartments_per_sqkm, numerator: residential_buildings_with_3_apartments_apartments, denominator_area_sqkm: True }
+input_port_groups:
+  - id: berlin-lor-housing-stock
+    input_ports:
+      - id: berlin-lor-housing-stock-2015-00
+        files:
+        - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+          target_file_name: berlin-lor-housing-stock-2015-00-districts.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2015-00-7-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-8-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-9-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-10-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-11-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-12-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-13-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-14-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-15-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-16-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-17-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-18-districts.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-forecast-areas-until-2020/berlin-lor-forecast-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2015-00-forecast-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2015-00-7-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-8-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-9-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-10-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-11-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-12-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-13-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-14-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-15-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-16-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-17-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-18-forecast-areas.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-district-regions-until-2020/berlin-lor-district-regions-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2015-00-district-regions.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2015-00-7-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-8-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-9-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-10-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-11-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-12-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-13-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-14-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-15-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-16-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-17-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-18-district-regions.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-planning-areas-until-2020/berlin-lor-planning-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2015-00-planning-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2015-00-7-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-8-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-9-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-10-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-11-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-12-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-13-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-14-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-15-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-16-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-17-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2015-00-18-planning-areas.csv, attributes: *all }
+      - id: berlin-lor-housing-stock-2016-00
+        files:
+        - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+          target_file_name: berlin-lor-housing-stock-2016-00-districts.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2016-00-7-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-8-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-9-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-10-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-11-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-12-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-13-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-14-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-15-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-16-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-17-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-18-districts.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-forecast-areas-until-2020/berlin-lor-forecast-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2016-00-forecast-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2016-00-7-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-8-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-9-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-10-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-11-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-12-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-13-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-14-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-15-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-16-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-17-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-18-forecast-areas.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-district-regions-until-2020/berlin-lor-district-regions-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2016-00-district-regions.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2016-00-7-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-8-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-9-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-10-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-11-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-12-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-13-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-14-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-15-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-16-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-17-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-18-district-regions.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-planning-areas-until-2020/berlin-lor-planning-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2016-00-planning-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2016-00-7-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-8-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-9-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-10-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-11-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-12-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-13-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-14-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-15-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-16-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-17-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2016-00-18-planning-areas.csv, attributes: *all }
+      - id: berlin-lor-housing-stock-2017-00
+        files:
+        - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+          target_file_name: berlin-lor-housing-stock-2017-00-districts.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2017-00-7-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-8-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-9-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-10-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-11-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-12-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-13-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-14-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-15-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-16-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-17-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-18-districts.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-forecast-areas-until-2020/berlin-lor-forecast-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2017-00-forecast-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2017-00-7-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-8-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-9-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-10-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-11-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-12-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-13-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-14-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-15-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-16-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-17-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-18-forecast-areas.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-district-regions-until-2020/berlin-lor-district-regions-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2017-00-district-regions.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2017-00-7-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-8-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-9-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-10-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-11-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-12-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-13-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-14-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-15-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-16-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-17-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-18-district-regions.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-planning-areas-until-2020/berlin-lor-planning-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2017-00-planning-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2017-00-7-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-8-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-9-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-10-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-11-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-12-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-13-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-14-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-15-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-16-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-17-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2017-00-18-planning-areas.csv, attributes: *all }
+      - id: berlin-lor-housing-stock-2018-00
+        files:
+        - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+          target_file_name: berlin-lor-housing-stock-2018-00-districts.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2018-00-7-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-8-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-9-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-10-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-11-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-12-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-13-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-14-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-15-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-16-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-17-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-18-districts.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-forecast-areas-until-2020/berlin-lor-forecast-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2018-00-forecast-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2018-00-7-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-8-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-9-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-10-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-11-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-12-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-13-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-14-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-15-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-16-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-17-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-18-forecast-areas.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-district-regions-until-2020/berlin-lor-district-regions-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2018-00-district-regions.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2018-00-7-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-8-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-9-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-10-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-11-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-12-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-13-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-14-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-15-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-16-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-17-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-18-district-regions.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-planning-areas-until-2020/berlin-lor-planning-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2018-00-planning-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2018-00-7-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-8-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-9-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-10-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-11-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-12-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-13-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-14-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-15-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-16-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-17-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2018-00-18-planning-areas.csv, attributes: *all }
+      - id: berlin-lor-housing-stock-2019-00
+        files:
+        - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+          target_file_name: berlin-lor-housing-stock-2019-00-districts.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2019-00-7-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-8-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-9-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-10-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-11-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-12-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-13-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-14-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-15-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-16-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-17-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-18-districts.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-forecast-areas-until-2020/berlin-lor-forecast-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2019-00-forecast-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2019-00-7-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-8-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-9-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-10-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-11-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-12-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-13-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-14-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-15-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-16-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-17-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-18-forecast-areas.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-district-regions-until-2020/berlin-lor-district-regions-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2019-00-district-regions.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2019-00-7-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-8-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-9-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-10-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-11-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-12-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-13-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-14-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-15-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-16-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-17-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-18-district-regions.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-planning-areas-until-2020/berlin-lor-planning-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2019-00-planning-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2019-00-7-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-8-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-9-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-10-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-11-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-12-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-13-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-14-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-15-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-16-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-17-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2019-00-18-planning-areas.csv, attributes: *all }
+      - id: berlin-lor-housing-stock-2020-00
+        files:
+        - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+          target_file_name: berlin-lor-housing-stock-2020-00-districts.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2020-00-7-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-8-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-9-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-10-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-11-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-12-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-13-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-14-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-15-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-16-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-17-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-18-districts.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-forecast-areas-until-2020/berlin-lor-forecast-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2020-00-forecast-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2020-00-7-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-8-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-9-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-10-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-11-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-12-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-13-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-14-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-15-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-16-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-17-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-18-forecast-areas.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-district-regions-until-2020/berlin-lor-district-regions-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2020-00-district-regions.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2020-00-7-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-8-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-9-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-10-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-11-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-12-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-13-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-14-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-15-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-16-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-17-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-18-district-regions.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-planning-areas-until-2020/berlin-lor-planning-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2020-00-planning-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2020-00-7-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-8-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-9-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-10-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-11-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-12-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-13-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-14-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-15-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-16-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-17-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2020-00-18-planning-areas.csv, attributes: *all }
+      - id: berlin-lor-housing-stock-2021-00
+        files:
+        - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+          target_file_name: berlin-lor-housing-stock-2021-00-districts.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2021-00-7-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-8-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-9-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-10-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-11-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-12-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-13-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-14-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-15-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-16-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-17-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-18-districts.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-forecast-areas-until-2020/berlin-lor-forecast-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2021-00-forecast-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2021-00-7-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-8-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-9-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-10-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-11-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-12-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-13-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-14-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-15-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-16-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-17-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-18-forecast-areas.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-district-regions-until-2020/berlin-lor-district-regions-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2021-00-district-regions.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2021-00-7-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-8-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-9-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-10-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-11-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-12-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-13-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-14-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-15-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-16-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-17-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-18-district-regions.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-planning-areas-until-2020/berlin-lor-planning-areas-until-2020.geojson
+          target_file_name: berlin-lor-housing-stock-2021-00-planning-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2021-00-7-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-8-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-9-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-10-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-11-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-12-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-13-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-14-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-15-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-16-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-17-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2021-00-18-planning-areas.csv, attributes: *all }
+      - id: berlin-lor-housing-stock-2022-00
+        files:
+        - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+          target_file_name: berlin-lor-housing-stock-2022-00-districts.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2022-00-7-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-8-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-9-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-10-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-11-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-12-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-13-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-14-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-15-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-16-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-17-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-18-districts.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-forecast-areas-from-2021/berlin-lor-forecast-areas-from-2021.geojson
+          target_file_name: berlin-lor-housing-stock-2022-00-forecast-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2022-00-7-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-8-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-9-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-10-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-11-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-12-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-13-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-14-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-15-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-16-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-17-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-18-forecast-areas.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-district-regions-from-2021/berlin-lor-district-regions-from-2021.geojson
+          target_file_name: berlin-lor-housing-stock-2022-00-district-regions.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2022-00-7-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-8-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-9-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-10-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-11-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-12-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-13-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-14-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-15-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-16-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-17-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-18-district-regions.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-planning-areas-from-2021/berlin-lor-planning-areas-from-2021.geojson
+          target_file_name: berlin-lor-housing-stock-2022-00-planning-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2022-00-7-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-8-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-9-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-10-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-11-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-12-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-13-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-14-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-15-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-16-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-17-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2022-00-18-planning-areas.csv, attributes: *all }
+      - id: berlin-lor-housing-stock-2023-00
+        files:
+        - geojson_template_file_name: berlin-lor-districts/berlin-lor-districts.geojson
+          target_file_name: berlin-lor-housing-stock-2023-00-districts.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2023-00-7-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-8-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-9-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-10-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-11-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-12-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-13-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-14-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-15-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-16-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-17-districts.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-18-districts.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-forecast-areas-from-2021/berlin-lor-forecast-areas-from-2021.geojson
+          target_file_name: berlin-lor-housing-stock-2023-00-forecast-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2023-00-7-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-8-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-9-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-10-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-11-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-12-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-13-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-14-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-15-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-16-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-17-forecast-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-18-forecast-areas.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-district-regions-from-2021/berlin-lor-district-regions-from-2021.geojson
+          target_file_name: berlin-lor-housing-stock-2023-00-district-regions.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2023-00-7-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-8-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-9-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-10-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-11-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-12-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-13-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-14-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-15-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-16-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-17-district-regions.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-18-district-regions.csv, attributes: *all }
+        - geojson_template_file_name: berlin-lor-planning-areas-from-2021/berlin-lor-planning-areas-from-2021.geojson
+          target_file_name: berlin-lor-housing-stock-2023-00-planning-areas.geojson
+          source_files:
+            - { source_file_name: berlin-lor-housing-stock-2023-00-7-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-8-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-9-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-10-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-11-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-12-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-13-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-14-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-15-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-16-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-17-planning-areas.csv, attributes: *all }
+            - { source_file_name: berlin-lor-housing-stock-2023-00-18-planning-areas.csv, attributes: *all }
