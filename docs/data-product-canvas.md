@@ -7,7 +7,7 @@
 * description: Data product providing Berlin housing stock data on different LOR hierarchy levels
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock
 * license: CC-BY 4.0
-* updated: 2025-07-06
+* updated: 2025-08-21
 
 ## Input Ports
 
@@ -644,7 +644,7 @@
 * owner: Open Lifeworlds
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/tree/main/data/03-gold/berlin-lor-housing-stock-geojson
 * license: CC-BY 4.0
-* updated: 2025-07-06
+* updated: 2025-08-21
 
 **Files**
 
@@ -690,7 +690,7 @@
 * owner: Open Lifeworlds
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/tree/main/data/03-gold/berlin-lor-housing-stock-statistics
 * license: CC-BY 4.0
-* updated: 2025-07-06
+* updated: 2025-08-21
 
 **Files**
 

@@ -47,6 +47,29 @@ attribute_groups:
     - { name: residential_buildings_with_3_apartments_per_sqkm, numerator: residential_buildings_with_3_apartments, denominator_area_sqkm: True }
     - { name: residential_buildings_with_3_apartments_living_area_per_sqkm, numerator: residential_buildings_with_3_apartments_living_area, denominator_area_sqkm: True }
     - { name: residential_buildings_with_3_apartments_apartments_per_sqkm, numerator: residential_buildings_with_3_apartments_apartments, denominator_area_sqkm: True }
+    - { name: inhabitants_per_inhabitant, numerator: inhabitants, denominator: inhabitants }
+    - { name: apartments_per_inhabitant, numerator: apartments, denominator: inhabitants }
+    - { name: apartments_with_1_room_per_inhabitant, numerator: apartments_with_1_room, denominator: inhabitants }
+    - { name: apartments_with_2_rooms_per_inhabitant, numerator: apartments_with_2_rooms, denominator: inhabitants }
+    - { name: apartments_with_3_rooms_per_inhabitant, numerator: apartments_with_3_rooms, denominator: inhabitants }
+    - { name: apartments_with_4_rooms_per_inhabitant, numerator: apartments_with_4_rooms, denominator: inhabitants }
+    - { name: apartments_with_5_rooms_per_inhabitant, numerator: apartments_with_5_rooms, denominator: inhabitants }
+    - { name: apartments_with_6_rooms_per_inhabitant, numerator: apartments_with_6_rooms, denominator: inhabitants }
+    - { name: apartments_with_7_or_more_apartments_per_inhabitant, numerator: apartments_with_7_or_more_apartments, denominator: inhabitants }
+    - { name: apartments_with_7_rooms_or_more_per_inhabitant, numerator: apartments_with_7_rooms_or_more, denominator: inhabitants }
+    - { name: apartments_rooms_per_inhabitant, numerator: apartments_rooms, denominator: inhabitants }
+    - { name: apartments_living_area_per_inhabitant, numerator: apartments_living_area, denominator: inhabitants }
+    - { name: residential_buildings_per_inhabitant, numerator: residential_buildings, denominator: inhabitants }
+    - { name: residential_buildings_living_area_per_inhabitant, numerator: residential_buildings_living_area, denominator: inhabitants }
+    - { name: residential_buildings_apartments_per_inhabitant, numerator: residential_buildings_apartments, denominator: inhabitants }
+    - { name: residential_buildings_with_1_apartment_per_inhabitant, numerator: residential_buildings_with_1_apartment, denominator: inhabitants }
+    - { name: residential_buildings_with_1_apartment_living_area_per_inhabitant, numerator: residential_buildings_with_1_apartment_living_area, denominator: inhabitants }
+    - { name: residential_buildings_with_2_apartments_per_inhabitant, numerator: residential_buildings_with_2_apartments, denominator: inhabitants }
+    - { name: residential_buildings_with_2_apartments_living_area_per_inhabitant, numerator: residential_buildings_with_2_apartments_living_area, denominator: inhabitants }
+    - { name: residential_buildings_with_2_apartments_apartments_per_inhabitant, numerator: residential_buildings_with_2_apartments_apartments, denominator: inhabitants }
+    - { name: residential_buildings_with_3_apartments_per_inhabitant, numerator: residential_buildings_with_3_apartments, denominator: inhabitants }
+    - { name: residential_buildings_with_3_apartments_living_area_per_inhabitant, numerator: residential_buildings_with_3_apartments_living_area, denominator: inhabitants }
+    - { name: residential_buildings_with_3_apartments_apartments_per_inhabitant, numerator: residential_buildings_with_3_apartments_apartments, denominator: inhabitants }
 input_port_groups:
   - id: berlin-lor-housing-stock
     input_ports:
