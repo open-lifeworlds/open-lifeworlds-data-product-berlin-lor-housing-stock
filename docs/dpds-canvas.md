@@ -60,6 +60,8 @@
 ### Output Ports
 #### berlin-lor-housing-stock-geojson
 * fully qualified name: berlin-lor-housing-stock-geojson
+#### berlin-lor-housing-stock-statistics
+* fully qualified name: berlin-lor-housing-stock-statistics
 
 
 ---

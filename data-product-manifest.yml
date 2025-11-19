@@ -6,7 +6,7 @@ metadata:
   description: Data product providing Berlin housing stock data on different LOR hierarchy levels
   url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock
   license: CC-BY 4.0
-  updated: 2025-10-29
+  updated: 2025-10-31
   schema:
     - name: apartments
       description: number of apartments
@@ -705,7 +705,7 @@ output_ports:
       description:
       url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/tree/main/data/03-gold/berlin-lor-housing-stock-geojson
       license: CC-BY 4.0
-      updated: 2025-10-29
+      updated: 2025-10-31
       schema:
     files:
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2015-00-district-regions.geojson
@@ -744,6 +744,18 @@ output_ports:
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-districts.geojson
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-forecast-areas.geojson
       - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-planning-areas.geojson
+    manifest_url:
+  - id: berlin-lor-housing-stock-statistics
+    metadata:
+      name: Berlin Lor Housing Stock Statistics
+      owner: Open Lifeworlds
+      description:
+      url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/tree/main/data/03-gold/berlin-lor-housing-stock-statistics
+      license: CC-BY 4.0
+      updated: 2025-10-31
+      schema:
+    files:
+      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-statistics/berlin-lor-housing-stock-statistics.json
     manifest_url:
 observability:
   quality:

@@ -7,7 +7,7 @@
 * description: Data product providing Berlin housing stock data on different LOR hierarchy levels
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock
 * license: CC-BY 4.0
-* updated: 2025-10-29
+* updated: 2025-10-31
 
 ## Input Ports
 
@@ -644,7 +644,7 @@
 * owner: Open Lifeworlds
 * url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/tree/main/data/03-gold/berlin-lor-housing-stock-geojson
 * license: CC-BY 4.0
-* updated: 2025-10-29
+* updated: 2025-10-31
 
 **Files**
 
@@ -684,6 +684,17 @@
 * [berlin-lor-housing-stock-2023-00-districts.geojson](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-districts.geojson)
 * [berlin-lor-housing-stock-2023-00-forecast-areas.geojson](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-forecast-areas.geojson)
 * [berlin-lor-housing-stock-2023-00-planning-areas.geojson](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-planning-areas.geojson)
+
+### Berlin Lor Housing Stock Statistics
+
+* owner: Open Lifeworlds
+* url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/tree/main/data/03-gold/berlin-lor-housing-stock-statistics
+* license: CC-BY 4.0
+* updated: 2025-10-31
+
+**Files**
+
+* [berlin-lor-housing-stock-statistics.json](https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-statistics/berlin-lor-housing-stock-statistics.json)
 
 ## Observability
 
