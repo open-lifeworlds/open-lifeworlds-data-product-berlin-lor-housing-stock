@@ -6,7 +6,7 @@ metadata:
   description: Data product providing Berlin housing stock data on different LOR hierarchy levels
   url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock
   license: CC-BY 4.0
-  updated: 2025-11-06
+  updated: 2025-11-07
   schema:
     - name: apartments
       description: number of apartments
@@ -70,45 +70,45 @@ output_ports:
       description:
       url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/tree/main/data/03-gold/berlin-lor-housing-stock-geojson
       license: CC-BY 4.0
-      updated: 2025-11-06
+      updated: 2025-11-07
       schema:
     files:
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2015-00-district-regions.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2015-00-districts.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2015-00-forecast-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2015-00-planning-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2016-00-district-regions.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2016-00-districts.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2016-00-forecast-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2016-00-planning-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2017-00-district-regions.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2017-00-districts.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2017-00-forecast-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2017-00-planning-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2018-00-district-regions.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2018-00-districts.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2018-00-forecast-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2018-00-planning-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2019-00-district-regions.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2019-00-districts.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2019-00-forecast-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2019-00-planning-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2020-00-district-regions.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2020-00-districts.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2020-00-forecast-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2020-00-planning-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2021-00-district-regions.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2021-00-districts.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2021-00-forecast-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2021-00-planning-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2022-00-district-regions.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2022-00-districts.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2022-00-forecast-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2022-00-planning-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-district-regions.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-districts.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-forecast-areas.geojson
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-planning-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2015-00-district-regions.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2015-00-districts.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2015-00-forecast-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2015-00-planning-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2016-00-district-regions.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2016-00-districts.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2016-00-forecast-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2016-00-planning-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2017-00-district-regions.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2017-00-districts.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2017-00-forecast-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2017-00-planning-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2018-00-district-regions.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2018-00-districts.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2018-00-forecast-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2018-00-planning-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2019-00-district-regions.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2019-00-districts.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2019-00-forecast-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2019-00-planning-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2020-00-district-regions.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2020-00-districts.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2020-00-forecast-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2020-00-planning-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2021-00-district-regions.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2021-00-districts.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2021-00-forecast-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2021-00-planning-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2022-00-district-regions.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2022-00-districts.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2022-00-forecast-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2022-00-planning-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-district-regions.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-districts.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-forecast-areas.geojson
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-geojson/berlin-lor-housing-stock-2023-00-planning-areas.geojson
   - id: berlin-lor-housing-stock-statistics
     metadata:
       name: Berlin Lor Housing Stock Statistics
@@ -116,10 +116,10 @@ output_ports:
       description:
       url: https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/tree/main/data/03-gold/berlin-lor-housing-stock-statistics
       license: CC-BY 4.0
-      updated: 2025-11-06
+      updated: 2025-11-07
       schema:
     files:
-      - https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/main/data/03-gold/berlin-lor-housing-stock-statistics/berlin-lor-housing-stock-statistics.json
+      - https://media.githubusercontent.com/media/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/refs/heads/main/data/03-gold/berlin-lor-housing-stock-statistics/berlin-lor-housing-stock-statistics.json
 observability:
   quality:
     - name: geojson_property_completeness
