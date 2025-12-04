@@ -1,15 +1,15 @@
-[![Issues](https://img.shields.io/github/issues/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock)](https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/issues)
+[![Issues](https://img.shields.io/github/issues/open-lifeworlds/open-lifeworlds-data-product-berlin-housing-stock)](https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-housing-stock/issues)
 
 <br />
 <p align="center">
-  <a href="https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock">
+  <a href="https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-housing-stock">
     <img src="logo-with-text.png" alt="Logo" style="height: 80px;">
   </a>
 
-  <h1 align="center">Berlin LOR housing stock</h1>
+  <h1 align="center">Berlin housing stock</h1>
 
   <p align="center">
-    Data product combining Berlin LOR housing stock data and geodata</a>
+    Data product combining Berlin housing stock data and geodata</a>
   </p>
 </p>
 
@@ -66,7 +66,7 @@ uv run main.py
 
 ## Roadmap
 
-See the [open issues](https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-lor-housing-stock/issues) for a list of proposed features (and
+See the [open issues](https://github.com/open-lifeworlds/open-lifeworlds-data-product-berlin-housing-stock/issues) for a list of proposed features (and
  known issues).
 
 ## License

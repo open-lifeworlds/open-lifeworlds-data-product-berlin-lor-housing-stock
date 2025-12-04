@@ -1,7 +1,7 @@
 [project]
-name = "open-lifeworlds-data-product-berlin-lor-housing-stock"
+name = "open-lifeworlds-data-product-berlin-housing-stock"
 version = "0.1.0"
-description = "Data product combining Berlin LOR housing stock data and geodata"
+description = "Data product combining Berlin housing stock data and geodata"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

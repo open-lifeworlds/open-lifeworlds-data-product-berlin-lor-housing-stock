@@ -7,15 +7,12 @@
 ### Basic Information
 
 * output file formats: geojson, .json
-* categories: timeseries
 * description: Data product providing Berlin housing stock data on different LOR hierarchy levels
-* logo URL: https://raw.githubusercontent.com/open-data-product/open-data-product-berlin-lor-population-source-aligned/refs/heads/main/logo-with-text.png
-* product ID: berlin-lor-housing-stock
-* product series: Berlin Timeseries Series
+* logo URL: https://raw.githubusercontent.com/open-lifeworlds/open-lifeworlds-data-product-berlin-housing-stock/refs/heads/main/logo-with-text.png
+* product ID: berlin-housing-stock
 * status: active
 * tags: berlin, housing
 * type: source-aligned
-* value proposition: Combining Berlin LOR housing stock data and geodata
 * version: 1.0
 * visibility: public
 

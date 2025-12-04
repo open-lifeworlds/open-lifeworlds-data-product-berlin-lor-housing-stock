@@ -5,8 +5,8 @@
 
 ## Info
 
-* ID: berlin-lor-housing-stock
-* fully qualified name: urn:dpds:openlifeworlds:dataproducts:berlin-lor-housing-stock:1.0
+* ID: berlin-housing-stock
+* fully qualified name: urn:dpds:openlifeworlds:dataproducts:berlin-housing-stock:1.0
 * name: Berlin LOR Housing Stock
 * version: 1.0
 * display name: Berlin LOR Housing Stock
@@ -22,12 +22,14 @@
 ### Input Ports
 #### berlin-lor-geodata
 * fully qualified name: berlin-lor-geodata
-#### berlin-lor-housing-stock-source-aligned
-* fully qualified name: berlin-lor-housing-stock-source-aligned
+#### berlin-housing-stock-source-aligned
+* fully qualified name: berlin-housing-stock-source-aligned
 
 ### Output Ports
-#### berlin-lor-housing-stock-geojson
-* fully qualified name: berlin-lor-housing-stock-geojson
+#### berlin-housing-stock-geojson
+* fully qualified name: berlin-housing-stock-geojson
+#### berlin-housing-stock-statistics
+* fully qualified name: berlin-housing-stock-statistics
 #### berlin-lor-housing-stock-statistics
 * fully qualified name: berlin-lor-housing-stock-statistics
 

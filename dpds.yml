@@ -1,14 +1,14 @@
 ---
 dataProductDescriptor: data-product-descriptor
 info:
-  fullyQualifiedName: urn:dpds:openlifeworlds:dataproducts:berlin-lor-housing-stock:1.0
+  fullyQualifiedName: urn:dpds:openlifeworlds:dataproducts:berlin-housing-stock:1.0
   name: Berlin LOR Housing Stock
   version: '1.0'
   domain: domain
   owner:
     id: Open Lifeworlds
     name: Open Lifeworlds
-  id: berlin-lor-housing-stock
+  id: berlin-housing-stock
   entityType:
   displayName: Berlin LOR Housing Stock
   description: Data product providing Berlin housing stock data on different LOR hierarchy levels
@@ -18,8 +18,21 @@ interfaceComponents:
     - promises:
       expectations:
       obligations:
-      id: berlin-lor-housing-stock-geojson
-      fullyQualifiedName: berlin-lor-housing-stock-geojson
+      id: berlin-housing-stock-geojson
+      fullyQualifiedName: berlin-housing-stock-geojson
+      entityType:
+      name: ''
+      version:
+      displayName:
+      description:
+      componentGroup:
+      tags:
+      externalDocs:
+    - promises:
+      expectations:
+      obligations:
+      id: berlin-housing-stock-statistics
+      fullyQualifiedName: berlin-housing-stock-statistics
       entityType:
       name: ''
       version:
@@ -58,8 +71,8 @@ interfaceComponents:
     - promises:
       expectations:
       obligations:
-      id: berlin-lor-housing-stock-source-aligned
-      fullyQualifiedName: berlin-lor-housing-stock-source-aligned
+      id: berlin-housing-stock-source-aligned
+      fullyQualifiedName: berlin-housing-stock-source-aligned
       entityType:
       name: ''
       version:
